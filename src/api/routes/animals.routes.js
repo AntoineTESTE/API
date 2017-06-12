@@ -1,4 +1,10 @@
+// ROUTING Animals contient les routes spécifiques pour le modèle animal
+
+
 'use strict';
+
+
+// Export des Routes
 
 module.exports = (server, validations, handlers) => {
   //Add the route to create an array of animals

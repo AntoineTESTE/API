@@ -1,7 +1,15 @@
-'use strict';
-require('./bootstrap');
+// Le serveur contient les méthodes de connexion et les require des plugins du projet
 
-// Plugins
+
+
+'use strict';
+
+
+require('./bootstrap'); // require librairie globale
+
+
+
+// require des Plugins
 const Hapi = require('hapi');
 const Boom = require('boom');
 const Good = require('good');
@@ -11,15 +19,22 @@ const HapiSwagger = require('hapi-swagger');
 const Joi = require('joi');
 const uuid = require('uuid');
 
-// Create a server with a host and port
+
+
+// Connexion au serveur
 const server = new Hapi.Server();
 server.connection({
   host: 'localhost',
   port: 8000
 });
 
+
+// Jointure des sources / serveur
 require('./src')(server);
 
+
+
+// Enregistrement du serveur auprès de Swagger
 server.register([
   Inert,
   Vision, {
@@ -32,7 +47,7 @@ server.register([
     }
   }
 ], (err) => {
-  server.start((err) => {
+  server.start((err) => { // si plantage serveur => erreur
     if (err) {
       throw err;
     }

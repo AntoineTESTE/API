@@ -1,3 +1,7 @@
+// modèle ANIMAL contenant les méthodes spécifiques à ce qui est traié
+
+
+
 'use strict';
 
 const uuid = require('uuid');
@@ -9,6 +13,8 @@ let animals = [{
   "name": "chien"
 }];
 
+
+// Exportation des méthodes
 module.exports = () => {
   return {
     findAll(f) {
