@@ -1,5 +1,9 @@
+// Le handler (controlleur) recoit une requete et fournit une réponse à travers des méthodes
+
+
 'use strict';
 
+// export des méthodes
 module.exports = (models) => {
   return {
     findAll(request, reply) {
