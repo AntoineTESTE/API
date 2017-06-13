@@ -11,7 +11,19 @@ let animals = [{
 }, {
   "id": "1462deba-ce90-4ccd-b13c-c16576c28294",
   "name": "chien"
-}];
+}, {
+  "id": "1e74adb2-9ef4-4fd9-9f7c-bf590bc78afd",
+  "name": "cheval"
+}, {
+  "id": "13765b81-be06-4a0f-a8bc-9b68196f4779",
+  "name": "rat"
+}, {
+  "id": "942c1622-3947-474f-b249-3b64856a1b11",
+  "name": "souris"
+}
+
+
+];
 
 
 // Exportation des méthodes
