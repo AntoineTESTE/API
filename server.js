@@ -25,7 +25,13 @@ const uuid = require('uuid');
 const server = new Hapi.Server();
 server.connection({
   host: 'localhost',
-  port: 8000
+  port: 8000,
+  routes: {
+    cors: {
+      origin: ['*'],
+      credentials: true
+    }
+  }
 });
 
 
